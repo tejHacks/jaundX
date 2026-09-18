@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+# JaundX
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+JaundX helps users perform quick camera-based checks to monitor newborn jaundice between clinical visits. It takes a photo of a baby's skin or eyes, analyzes the image for risk factors, and provides clear recommendations on what to do next. This gives parents and caregivers peace of mind with straightforward functionality that works entirely on the local device.
 
-## Get started
+## Installation
 
-1. Install dependencies
+Follow these steps to set up the project on your local machine.
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/tejHacks/jaundX.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Navigate into the project directory:
+```bash
+cd jaundX
+```
 
-## Learn more
+3. Install the dependencies:
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Start the development server:
+```bash
+npm run start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Usage
 
-## Join the community
+When you open the application, you will be greeted by the home screen which displays recent screenings and an option to start a new one. 
 
-Join our community of developers creating universal apps.
+To run a screening, tap the "Start new screening" button. This will open the camera interface. You will need to grant camera permissions if you have not done so already. Frame the baby's skin or eyes in good natural light, then tap the capture button. Alternatively, you can choose an existing photo from your device's gallery.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The application will process the image through a series of steps, checking lighting and color balance before running the screening model. Once complete, it displays a results screen showing a risk level of low, moderate, or high, along with a confidence percentage and recommendations on what to do next. You can tap "Save to history" to store the result locally, allowing you to review past screenings at any time from the history tab.
+
+*Note: JaundX is a screening prototype, not a diagnostic device. Always confirm results with a clinician and a bilirubin test.*
+
+## Features
+
+* Camera integration for direct image capture with front and rear facing support.
+* Media gallery access to upload previously taken photos for analysis.
+* Automated image processing that checks lighting and color balance.
+* Clear risk assessment badges indicating low, moderate, or high risk levels.
+* Local storage implementation to keep a persistent history of all past screenings.
+* Privacy focused architecture that processes and stores all images strictly on the device.
+
+## Technologies Used
+
+| Technology | Purpose |
+| :--- | :--- |
+| [TypeScript](https://www.typescriptlang.org/) | Strongly typed programming language |
+| [React Native](https://reactnative.dev/) | Framework for building native applications |
+| [Expo](https://expo.dev/) | Platform for universal React applications |
+| [SQLite](https://sqlite.org/) | Embedded database for local storage |
+| [Lucide](https://lucide.dev/) | Clean and consistent iconography |
+
+## Contributing
+
+Contributions are welcome. Feel free to open an issue or submit a pull request to help improve the project. Please ensure that your code follows the existing style and that you test your changes thoroughly before submitting.
+
+## Author Info
+
+* GitHub: [tejHacks](https://github.com/tejHacks)
+
+##
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
+[![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
+
+[![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://dokugen.samueltuoyo.com)
